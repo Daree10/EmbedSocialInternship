@@ -1,0 +1,174 @@
+body {
+    background: #f9fafd;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.layout-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffbe0b;
+    transition: .4s;
+}
+  
+.slider:before {
+    font-family: FontAwesome;
+    position: absolute;
+    content: "\f185";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input:checked + .slider:before {
+    content: "\f186";
+}
+  
+input:checked + .slider {
+    background-color: #000000;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#jsondata {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+
+  #jsondata div {
+    width: 312px;
+    margin: 10px 0;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    padding: 18px 5px;
+  }
+
+  #jsondata div .img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  #jsondata div .profilePic {
+    width: 51.2px;
+    object-fit: cover;
+    height: 51.2px;
+    border-radius: 100px;
+    display: inline;
+    margin-left: 130px;
+  }
+
+  #jsondata div h3.name {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    bottom: 25px;
+    left: 10px;
+    font-size: 20.8px;
+  }
+
+  #jsondata div p {
+    border: none;
+    background-color: white;
+    color: gray;
+    position: relative;
+    top: 2px;
+  }
+  
+  #jsondata div h5 {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 5px;
+    left: -105px;
+    font-size: 12.8px;
+    font-weight: 100;
+  }
+  
+  #jsondata div p.caption {
+    padding: 0 2px 15px 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  }
+  
+  @media screen and (max-width: 768px) {
+    #jsondata div {
+      width: 100%;
+      margin: 10px 5px;
+    }
+  }
+
+  button#loadmore {
+    margin: 50px auto;
+    display: block;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 50px;
+    padding: 15px 25px;
+    cursor: pointer;
+    color: black;
+  }
+  button#loadmore:hover {
+    color: lightgray;
+    background-color: gray;
+  }
+
+  body {
+    transition: background-color 0.3s ease;
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
